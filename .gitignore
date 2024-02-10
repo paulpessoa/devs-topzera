@@ -1,0 +1,13 @@
+# Arquivos temporários
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Arquivos de build
+/build
+
+# Arquivos de ambiente
+.env
+.next
+
+# Outros arquivos e diretórios que você deseja ignorar

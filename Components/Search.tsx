@@ -12,7 +12,7 @@ interface User {
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [users, setUsers] = useState<User[]>([]);
-  const [resultSize, setResultSize] = useState();
+  const [resultSize, setResultSize] = useState<number>(0);
 
     useEffect(() => {
       const fetchUsers = async () => {
@@ -45,7 +45,7 @@ const Search = () => {
         placeholder="Enter GitHub username" 
       />
  </div>
-      <h3 style={{color: "#017870", textAlign:"center"}}>Results: {resultSize}</h3>
+      <h3 style={{color: "#017870", textAlign:"center"}}>{resultSize > 0 && `Results: ${resultSize}`}</h3>
       <div style={{display: "flex", flexDirection: "row", flexWrap: 'wrap', width: "100%", justifyContent: 'space-around', alignItems:"center"}}>
       {users.map((user) => (
         
